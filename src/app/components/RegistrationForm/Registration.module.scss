@@ -1,0 +1,206 @@
+@import "../../config/variableAccount.scss";
+
+.loading-form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #0243A6;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  color: #ffff;
+}
+.form-lk {
+  & label {
+    font-size: $font-size-smile;
+    line-height: 22px;
+    color: $color-dark;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+  }
+  & input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 11px 20px;
+    border: 1px solid $color-blue;
+    border-radius: 5px;
+  }
+}
+.form-lk-btn {
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px 0;
+  background: $color-blue;
+  color: $color-white;
+  font-size: $font-size-normal;
+  line-height: 22px;
+  font-weight: $font-weight500;
+  transition: all 0.5s ease;
+  &:hover {
+    transition: all 0.5s ease;
+    background: $color-light-blue;
+  }
+  &:active {
+    transition: all 0.5s ease;
+    background: $color-dark-blue;
+  }
+  &:focus {
+    transition: all 0.5s ease;
+    background: $color-dark-blue;
+  }
+}
+.form-register {
+  max-width: 300px;
+  width: 100%;
+  margin: 15px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  position: relative;
+  &__wrapper {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    & > label {
+      margin-top: 10px;
+      &::after {
+        content: "*";
+        color: red;
+        margin-left: 2px;
+      }
+      
+    }
+    & > label:first-child{
+        margin-top:0px
+      }
+  }
+  &__subtitle {
+    margin-top: 25px;
+    color: $color-dark;
+    font-size: $font-size-normal;
+    text-align: center;
+    letter-spacing: -2%;
+  }
+  &__form {
+    display: none;
+    margin-top: 25px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    &.active {
+      display: flex;
+    }
+    & > label:nth-child(3) {
+      margin-top: 15px;
+    }
+  }
+
+  &__email-wrapper {
+    width: 100%;
+    & > input {
+      margin-top: 10px;
+    }
+  }
+  &__phone-wrapper {
+    width: 100%;
+    & > input {
+      margin-top: 10px;
+    }
+  }
+  &__hint {
+    margin-top: 15px;
+    font-size: $font-size-smile;
+    line-height: 22px;
+    color: $color-dark;
+    position: relative;
+    &::after {
+      content: "*";
+      color: red;
+      position: absolute;
+      left: 0;
+    }
+  }
+  &__footer {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 5px;
+    & > p {
+      font-size: $font-size-smile;
+      line-height: 22px;
+      color: $color-dark;
+    }
+  }
+}
+.phone-register-user {
+  margin-top: 0px !important;
+}
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  & > input {
+    width: 100%;
+    padding: 11px 20px;
+    border: 1px solid $color-blue;
+    border-radius: 5px;
+    margin-top: 0px;
+  }
+}
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 20%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  & > .password__view {
+    display: none;
+  }
+}
+.open-password > .password__view {
+  display: block;
+}
+.open-password > .password__hidden {
+  display: none;
+}
+.approval-block {
+  display: flex;
+  align-items: flex-end;
+  & > input {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid $color-blue;
+    cursor: pointer;
+  }
+  & > label {
+    margin-left: 10px;
+    font-size: $font-size-smile;
+    line-height: 18px;
+    &::after {
+      content: "";
+    }
+    & > a {
+      color: $color-blue;
+      font-size: $font-size-smile;
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .form-register {
+    &__wrapper {
+      max-width: 280px;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.reviews-item {
+  margin-top: 32px;
+  border-top: 1px solid #6a85ab;
+  &__header {
+    padding-top: 16px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0 8px;
+  }
+  &__user {
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    color: #6a85ab;
+  }
+  &__date {
+    font-size: 10px;
+    line-height: 12px;
+    color: #9fb1c9;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+  &__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-top: 8px;
+  }
+}
+.reviews-item-response {
+  margin-top: 16px;
+  border-radius: 12px;
+  background: #f5f9ff;
+  padding: 10px 10px 10px 24px;
+  display: flex;
+  flex-direction: column;
+  &__header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0 8px
+  }
+  &__admin {
+    font-size: 10px;
+    line-height: 12px;
+    color: #0243a6;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+  &__date {
+    font-size: 10px;
+    line-height: 12px;
+    color: #9fb1c9;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-top: 8px;
+  }
+}

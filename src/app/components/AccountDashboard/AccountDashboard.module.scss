@@ -1,0 +1,36 @@
+@import "../../config/variableAccount.scss";
+
+.dashboard {
+  &__content-body {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  &__content-title {
+    font-size: $font-size-veryBig;
+    font-weight: $font-weight500;
+    line-height: 1.3;
+    color: $color-dark;
+    padding-left: 20px;
+  }
+}
+
+
+.content-section--active {
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .dashboard {
+    &__content-body {
+      margin-top: 0px;
+      padding: 20px 0;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .dashboard {
+    &__content-title {
+      font-size: 22px;
+    }
+  }
+}

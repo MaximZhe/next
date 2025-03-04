@@ -1,0 +1,9 @@
+.payment {
+  display: flex;
+  align-items: center;
+  gap: 0 24px;
+  &__image {
+    width: auto;
+    height: auto;
+  }
+}

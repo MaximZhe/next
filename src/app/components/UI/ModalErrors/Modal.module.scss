@@ -1,0 +1,33 @@
+.modal-overlay{
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.modal-close{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: block;
+    top: 1%;
+    right: 1%;
+    background: url('../../../icons/image/Close_square.svg') no-repeat;
+}

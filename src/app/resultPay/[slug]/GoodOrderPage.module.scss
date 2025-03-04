@@ -1,0 +1,225 @@
+.ending-order {
+  padding-top: 16px;
+  padding-bottom: 60px;
+  &__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 32px;
+  }
+  &__info {
+    max-width: 620px;
+    width: 100%;
+  }
+  &__content {
+    margin-top: 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 48px;
+  }
+  &__icon {
+    width: 48px;
+    height: 48px;
+  }
+  &__title {
+    margin-top: 64px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  &__text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    margin-top: 24px;
+    &:nth-child(5) {
+      margin-top: 0;
+    }
+    & > a {
+      color: #2b394d;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    & > [href^="mailto:"] {
+      font-weight: 500;
+    }
+    & > [href^="tel:"] {
+      &:hover {
+        color: #005ee4;
+      }
+    }
+    & > span {
+      color: #005ee4;
+    }
+  }
+  &__link {
+    margin-top: 24px;
+    max-width: 262px;
+    width: 100%;
+    padding: 12px 18px;
+    border-radius:6px;
+    border:1px solid #005ee4;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #005ee4;
+    text-align: center;
+    transition: .5s ease;
+    position: relative;
+    background-color: #ffffff;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      
+      transition: all 0.5s;
+      border-radius: 7px;
+      
+    }
+    &:hover::before {
+      opacity: 0 ;
+      transform: scale(0.5,0.5);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.5s;
+      border: 1px solid rgb(0, 94, 228, 0.5);
+      border-radius: 7px;
+      transform: scale(1.2,1.2);
+    }
+    &:hover::after {
+      border: 3px solid rgb(0, 94, 228, 0.5);
+      opacity: 1;
+      transform: scale(1,1);
+    }
+    &:hover{
+      color:#FFFFFF;
+      background:rgb(0, 94, 228);
+    }
+  }
+  &__more {
+    color: #005ee4;
+    margin-top: 24px;
+    & > svg {
+      fill: #005ee4;
+    }
+  }
+  &__promo {
+    max-width: 350px;
+    width: 100%;
+    padding-top: 15px;
+  }
+}
+.ending-order-route {
+  margin-top: 24px;
+  height: 293px;
+  &:first-child {
+    margin-top: 32px;
+  }
+  &__item {
+    display: flex !important;
+    align-items: flex-end;
+    border-radius: 12px;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    & > a {
+      max-width: 350px;
+      width: 100%;
+      height: 100%;
+    }
+   
+    &:hover > div {
+      background: #cbcaca;
+    }
+  }
+  &__content {
+    border-radius: 8px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 16px;
+  }
+  &__name {
+    font-size: 16px;
+    line-height: 24px;
+    color: #2b394d;
+  }
+  &__price {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #005ee4;
+    & > span {
+      color: #005ee4;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .ending-order {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__promo {
+      max-width: 620px;
+      padding-top: 0;
+    }
+  }
+  .ending-order-route {
+    &:first-child {
+      margin-top: 24px;
+    }
+  }
+}
+@media (max-width: 576px) {
+    .ending-order{
+        &__content{
+            margin-top: 24px;
+            padding: 24px 16px;
+        }
+        &__title{
+            margin-top: 48px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+        }
+        &__text{
+            font-size: 14px;
+            line-height: 20px;
+            & > a{
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+  .ending-order-route {
+    height: 250px;
+  }
+}
+@media (max-width: 480px) {
+    .ending-order{
+        &__link{
+            padding: 5px 0;
+        }
+        
+    }
+}

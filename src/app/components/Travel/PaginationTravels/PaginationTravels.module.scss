@@ -1,0 +1,46 @@
+@import "../../../config/variableAccount.scss";
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 0 5px;
+  }
+  
+  .pagination-numbers {
+    display: flex;
+    gap: 0 5px;
+  }
+  .pagination-button,
+  .pagination-number {
+    border-radius: 50%;
+    background: #f7f7f7;
+    color: #2c595d;
+    font-size: 18px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  .pagination-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  .pagination-number--active {
+    background-color: $color-blue;
+    color: #fff;
+  }
+  
+  .pagination-button:hover,
+  .pagination-number:hover {
+    border: 1px solid $color-light-blue;
+  }
+
+  @media (max-width: 768px) {
+    .pagination {
+        margin-bottom: 60px;
+      }
+  }

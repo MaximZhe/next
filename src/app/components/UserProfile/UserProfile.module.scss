@@ -1,0 +1,337 @@
+@import "../../config/variableAccount.scss";
+
+.loading-spiner-account{
+  display: block !important;
+  max-width:42px;
+}
+.content-section {
+  display: block;
+  position: relative;
+  &__massage {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+    color: #0243a6;
+    background: #f0f3f6;
+    padding: 15px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0 auto;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+    width: 100%;
+    & > button {
+      background: #0243a6;
+      color: #ffffff;
+      width: 100%;
+      border-radius: 8px;
+      &:hover {
+        background: #0062c7;
+      }
+    }
+  }
+}
+.massage-active {
+  display: flex;
+}
+.user-profile-form {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    position: relative;
+    &--active {
+      background: rgba(0, 70, 142, 0.031372549);
+      border-radius: 8px;
+      box-shadow: 0px 0px 2px #00468e;
+      max-width: 350px;
+      padding: 0px 10px;
+    }
+    & > input {
+      width: 100%;
+      font-size: $font-size-normal;
+      padding: 10px 0;
+      color: #212529;
+      background: none;
+      border: none;
+      border-radius: 0px;
+      box-shadow: 0px 0px 0px #00468e;
+    }
+    & > svg {
+      position: absolute;
+      right: 2%;
+      cursor: pointer;
+    }
+  }
+  &__calendar {
+    position: absolute;
+    top: 55px;
+    z-index: 5;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    margin-top: 10px;
+    &--date {
+      position: relative;
+    }
+    & > label {
+      font-size: $font-size-smile;
+      color: $color-grey;
+    }
+    & > input {
+      font-size: $font-size-normal;
+      background: #00468e08;
+      border-radius: 8px;
+      box-shadow: 0px 0px 2px #00468e;
+      max-width: 350px;
+      padding: 10px;
+      &[readonly] {
+        padding: 10px 0;
+        color: $color-dark;
+        background: none;
+        border: none;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px #00468e;
+      }
+    }
+  }
+  &__body {
+    flex: 1;
+    margin-right: 10px;
+  }
+  &__btn {
+    max-width: 255px;
+    font-size: $font-size-normal;
+    color: $color-blue;
+    font-weight: $font-weight500;
+    line-height: 22px;
+    border-radius: 8px;
+    background-color: #00468e1a;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    &:hover {
+      background-color: $color-blue;
+      color:#FFFFFF;
+      
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+.vissible {
+  display: flex;
+}
+.new-password-fields {
+  display: flex;
+  margin-top: 2px;
+  flex-direction: column;
+  gap: 5px 0;
+  & > label {
+    font-size: $font-size-smile;
+    color: $color-grey;
+  }
+  & > input {
+    font-size: $font-size-normal;
+    color: $color-blue;
+    background: #00468e08;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px #00468e;
+    max-width: 350px;
+    padding: 10px;
+    &[readonly] {
+      color: $color-dark;
+      background: none;
+      border: none;
+      border-radius: 0px;
+      box-shadow: 0px 0px 0px #00468e;
+    }
+  }
+  & > .password-container-profile > .toggle-password-profile {
+    top: 20%;
+  }
+}
+#new-password-fields {
+  margin-top: 10px;
+}
+#user-profile-password {
+  margin-top: 35px;
+  &.hidden {
+    display: none;
+  }
+}
+#confirm-password {
+  margin-top: 0px;
+}
+#gender-display {
+  font-size: 16px;
+}
+#birth-date {
+  &[readonly] {
+    padding: 9px 0;
+  }
+  padding: 9px 0px 9px 10px;
+  cursor: pointer;
+}
+#gender-checkboxes {
+  gap: 0 10px;
+  align-items: center;
+  & > label {
+    display: flex;
+    align-items: center;
+  }
+  & > input {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    z-index: -1;
+    opacity: 0;
+    cursor: pointer;
+    & + label::before {
+      content: "";
+      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border-radius: 50%;
+      margin-right: 5px;
+      background-color: #00468e1a;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+      cursor: pointer;
+    }
+    &:checked + label::before {
+      content: "•";
+      width: 18px;
+      height: 18px;
+      font-size: 34px;
+      justify-content: center;
+      align-items: center;
+      color: $color-dark-blue;
+    }
+  }
+}
+
+.password-container-profile {
+  position: relative;
+  width: fit-content;
+
+  & > input {
+    font-size: $font-size-normal;
+    background: #00468e08;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px #00468e;
+    max-width: 350px;
+    padding: 10px;
+    &[readonly] {
+      padding: 10px 0;
+      color: $color-dark;
+      background: none;
+      border: none;
+      border-radius: 0px;
+      box-shadow: 0px 0px 0px #00468e;
+    }
+  }
+}
+.toggle-password-profile {
+  position: absolute;
+  right: 10px;
+  top: 20%;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  &:nth-child(1) {
+    margin-top: 15px;
+  }
+  & > .password__view {
+    display: none;
+  }
+  &.open > .password__view {
+    display: block;
+  }
+  &.open > .password__hidden {
+    display: none;
+  }
+}
+.open-password > .password__view {
+  display: block;
+}
+.open-password > .password__hidden {
+  display: none;
+}
+.container-btn {
+  display: flex;
+  gap: 0 10px;
+}
+@media (max-width: 768px) {
+  .user-profile-form {
+    &__btn {
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+    &__calendar {
+      max-width: 350px;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .user-profile-form {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__content {
+      gap: 0px 5px;
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 90px 200px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__calendar{
+      right: 0;
+      top:40px;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  .vissible {
+    display: grid;
+  }
+  #password-profile {
+    max-width: 200px;
+  }
+  #confirm-password {
+    max-width: 200px;
+  }
+  .new-password-fields {
+    &.active {
+      display: grid;
+    }
+    grid-template-columns: 90px 200px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px 5px;
+  }
+}

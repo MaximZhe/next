@@ -1,0 +1,56 @@
+.offer {
+    background: #0243a6;
+    &__wrapper {
+      background: url("../../icons/image/Map.png") no-repeat;
+      background-position-x: right;
+      background-position-y: top;
+      padding-bottom: 64px;
+    }
+    &__inner {
+      margin: 64px auto 0;
+      max-width: 1000px;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 700;
+      color: #ffffff;
+      max-width: 430px;
+    }
+    &__form {
+      margin-top: 64px;
+    }
+  }
+  @media (max-width: 768px) {
+   .offer{
+    &__form{
+      flex-direction: column;
+    }
+   }
+  }
+  @media (max-width: 600px) {
+    .offer{
+      &__inner{
+        margin-top: 0;
+      }
+      &__wrapper{
+        padding-bottom: 54px;
+      }
+      &__title{
+        font-size: 30px;
+        line-height: 36px;
+        max-width: 100%;
+        padding-top: 54px;
+      }
+    } 
+  }
+  @media (max-width: 576px) {
+    .offer{
+      &__wrapper {
+        background: none;
+        background-position-x: right;
+        background-position-y: top;
+        padding-bottom: 64px;
+      }
+    }
+  }

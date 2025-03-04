@@ -1,0 +1,19 @@
+.social-buttons{
+    display: flex;
+    flex-direction: column;
+    &__wrapper{
+        display: flex;
+        margin-top: 8px;
+        gap: 0 25px;
+    }
+    &__btn{
+
+    }
+    &__icon{
+        fill:#9FB1C9;
+        transition: .3s ease-in-out;
+        &:hover{
+            fill:#0243a6;
+        }
+    }
+}

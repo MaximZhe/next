@@ -1,0 +1,37 @@
+.filter-button{
+    padding: 8px 8px 8px 12px;
+    display: flex;
+    align-items:center;
+    border:1px solid #6A85AB;
+    &__text{
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #6A85AB;
+    }
+    &__icon{
+        fill: #6A85AB;
+        margin-bottom: 2px;
+        transition: .5s ease;
+    }
+    &.active{
+        & > .filter-button__text{
+            color:#005EE4;
+        }
+        & > svg{
+            transition: .5s ease;
+            fill:#005EE4;
+            transform: rotate(180deg);
+            margin-bottom: -2px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .filter-button{
+        &__text{
+            width: max-content;
+            max-width: 100%;
+            white-space: nowrap;
+        }
+    }
+  }

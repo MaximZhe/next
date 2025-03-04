@@ -1,0 +1,141 @@
+.info {
+  margin-top: 48px;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr max(510px);
+  }
+  &__img {
+    max-width: 626px;
+    height: auto;
+    width:100%;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 460px;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  &__text {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+  &__link {
+    margin-top: 44px;
+    max-width: 305px;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    background-color: rgb(0, 94, 228);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: all 0.5s;
+  position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      
+      transition: all 0.5s;
+      border-radius: 7px;
+      
+    }
+    &:hover::before {
+      opacity: 0 ;
+      transform: scale(0.5,0.5);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.5s;
+      border: 1px solid rgb(0, 94, 228, 0.5);
+      border-radius: 7px;
+      transform: scale(1.2,1.2);
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: scale(1,1);
+    }
+    &:hover{
+      color:#005ee4;
+      background:transparent;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .info {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    &__content {
+      margin-top: 24px;
+      max-width: max-content;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .info {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .info {
+    &__title {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .info{
+    &__link{
+      &::after {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+@media (max-width: 359px) {
+  .actions {
+    &__img {
+      position: absolute;
+      right: -12px;
+      height: 122px;
+      bottom: 0;
+      & > img {
+        height: 122px;
+      }
+    }
+  }
+}

@@ -1,0 +1,250 @@
+@import "../../config/variableAccount.scss";
+
+.content-section {
+  display: block;
+}
+.trip-table {
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
+  &__massege{
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 100px 200px 100px 100px 80px 50px;
+  gap: 10px;
+  border-bottom: 1px solid #2125291a;
+  align-items: center;
+}
+
+.table-cell {
+  padding: 10px;
+  text-align: left;
+  font-size: $font-size-smile;
+  font-weight: $font-weight400;
+  line-height: 22px;
+  color: $color-dark;
+  &:last-child{
+    line-height: inherit;
+  }
+  & > button {
+    font-size: $font-size-smile;
+    font-weight: $font-weight400;
+    line-height: 22px;
+    color: $color-dark;
+  }
+  &:nth-child(1) {
+    color: $color-grey;
+  }
+  &:nth-child(3) {
+    font-weight: $font-weight600;
+  }
+  &:nth-child(5) {
+    font-weight: $font-weight600;
+  }
+}
+
+.detail-button {
+  background:none;
+  &:hover {
+    color: $color-blue;
+  }
+}
+.get-button-file {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:none;
+  line-height: inherit!important;
+  & > svg {
+    width: 16px;
+    height: 22px;
+  }
+}
+
+.filter-button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.filter-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: $font-size-smile;
+  line-height: 22px;
+  font-weight: $font-weight400;
+  background: none;
+  color: $color-dark;
+  cursor: pointer;
+  
+  & > span {
+    font-size: $font-size-smile;
+    line-height: 22px;
+    font-weight: $font-weight400;
+    color: $color-dark;
+  }
+  &--active {
+    background: $color-dark-blue;
+    color: #ffffff;
+    & > span {
+      color: #ffffff;
+    }
+  }
+}
+
+
+.filter-button:hover {
+  background-color: $color-light-blue;
+  color: #ffffff;
+  & > span {
+    color: #ffffff;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 0 5px;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0 5px;
+}
+.pagination-button,
+.pagination-number {
+  border-radius: 50%;
+  background: #f7f7f7;
+  color: #2c595d;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.pagination-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.pagination-number--active {
+  background-color: $color-blue;
+  color: #fff;
+}
+
+.pagination-button:hover,
+.pagination-number:hover {
+  border: 1px solid $color-light-blue;
+}
+.scroll-arrow{
+  display: none;
+}
+@media (max-width: 768px) {
+  .pagination {
+      margin-bottom: 0px;
+    }
+}
+@media (max-width: 992px) {
+    .filter-button-group {
+        overflow: auto;
+        width: 100%;
+        padding: 10px 5px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+      }
+      .filter-button {
+        width: 100%; 
+        box-shadow: 0px 0px 0px 1px #01356a;
+      }
+    
+}
+
+@media (max-width: 480px) {
+    .filter-button {
+      padding: 10px 1px;
+    }
+  }
+@media (max-width: 992px) {
+  .trip-table{
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  .table-row {
+    grid-template-columns: 50px 100px 200px 100px 100px 80px 50px;
+    
+  }
+}
+
+@media (max-width: 768px) {
+  .table-row {
+    grid-template-columns: 30px 100px 200px 100px 90px 50px;
+  }
+  .table-cell {
+    font-size: 14px;
+    &:nth-child(5) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .table-row {
+    grid-template-columns: 30px 200px 100px 90px 50px;
+  }
+  .table-cell {
+    font-size: 14px;
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(5) {
+      display: none;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .table-cell {
+    font-size: 11px;
+  }
+  .content-section{
+    position: relative;
+  }
+  .scroll-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+    transition: 0.3s ease-in-out;
+    width: 25px;
+    height: 25px;
+    background: #0243a6;
+    border-radius: 50px;
+    margin-left:auto;
+    margin-right: 10px;
+  }
+  .filter-button-group{
+    margin-bottom:10px;
+  }
+  .trip-table{
+    margin-top: 10px;
+  }
+}

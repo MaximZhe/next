@@ -1,0 +1,95 @@
+.error-page {
+  padding: 48px 0 60px 0;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  &__content {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../icons/image/error-bg.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 200px;
+  }
+  &__title-icon {
+    max-width: 100%;
+    width: 100%;
+
+    fill: #000000;
+    max-width: 339px;
+  }
+  &__subtitle {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #445978;
+    margin-top: 32px;
+    text-align: center;
+  }
+  &__info {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #445978;
+    text-align: center;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #005ee4;
+    border-radius: 6px;
+    margin-top: 32px;
+    max-width: 166px;
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #005ee4;
+    transition: 0.5s ease;
+    &:hover {
+      background: #005ee4;
+      color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .error-page {
+    padding: 16px 0 28px 0;
+    &__title {
+      height: 140px;
+    }
+    &__subtitle {
+      line-height: 24px;
+    }
+    &__info {
+      margin-top: 5px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__btn {
+      margin-top: 24px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .error-page {
+    &__subtitle {
+      max-width: 290px;
+    }
+  }
+}

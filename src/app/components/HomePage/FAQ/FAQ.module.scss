@@ -1,0 +1,115 @@
+.accordion {
+  margin-top: 48px;
+  background: #ffffff;
+  padding: 48px 0 72px;
+  &__box {
+    max-width: 1224px;
+    width: 100%;
+    padding: 0 50px;
+    margin: 0 auto;
+  }
+  &__main-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  &__item {
+    margin-top: 32px;
+    border-top: 1px solid #d5dde7;
+    width: 100%;
+    max-width: 526px;
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  &__inner {
+    display: flex;
+    width: 100%;
+  }
+  &__wrapper {
+    width: 24px;
+    height: 24px;
+   padding: 4px 4px 2px;
+    border-radius: 50px;
+    background: #f0f3f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-out;
+    &.active{
+        transform: rotate(90deg);
+    }
+  }
+  &__icon {
+    fill: #005ee4;
+    margin-bottom: 2px;
+  }
+  &__title {
+    margin-left: 16px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-top: 16px;
+    max-width: 486px;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    &.active {
+      max-height: 1000px;
+    }
+  }
+}
+.accordion-columns{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:48px;
+}
+@media (max-width: 991px) {
+  .accordion{
+    &__item{
+      max-width: 100%;
+    }
+  }
+  .accordion-columns{
+    display: flex;
+    flex-direction: column;
+    gap:0;
+  }
+}
+@media (max-width: 660px) {
+  .accordion{
+    &__box{
+      padding: 0 12px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .accordion{
+    padding: 32px 0;
+    &__main-title{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__title{
+      font-size: 16px;
+    }
+    &__text{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__item{
+      margin-top: 24px;
+    }
+  }
+  .accordion-columns{
+    gap: 0;
+  }
+}

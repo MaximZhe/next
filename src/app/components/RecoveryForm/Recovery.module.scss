@@ -1,0 +1,162 @@
+@import "../../config/variableAccount.scss";
+
+.loading-form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #0243a6;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  color: #ffff;
+}
+.form-lk {
+  & label {
+    font-size: $font-size-smile;
+    line-height: 22px;
+    color: $color-dark;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+  }
+  & input {
+    width: 100%;
+    margin-top: 0px;
+    padding: 11px 20px;
+    border: 1px solid $color-blue;
+    border-radius: 5px;
+  }
+}
+.form-lk-btn {
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px 0;
+  background: $color-blue;
+  color: $color-white;
+  font-size: $font-size-normal;
+  line-height: 22px;
+  font-weight: $font-weight500;
+  transition: all 0.5s ease;
+  &:hover {
+    transition: all 0.5s ease;
+    background: $color-light-blue;
+  }
+  &:active {
+    transition: all 0.5s ease;
+    background: $color-dark-blue;
+  }
+  &:focus {
+    transition: all 0.5s ease;
+    background: $color-dark-blue;
+  }
+}
+
+.form-recovery {
+  max-width: 300px;
+  width: 100%;
+  margin: 15px auto 0;
+  display: block;
+  position: relative;
+  &__form {
+    margin-top: 15px;
+    & > #phoneRecovery {
+      margin-top: 0px;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    color: $color-dark;
+    font-weight: 500;
+    background: none;
+    text-align: center;
+  }
+  &__subtitle {
+    font-size: $font-size-smile;
+    line-height: 22px;
+    color: $color-dark;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+.form-recovery-verification {
+  margin-top: 15px;
+  display: none;
+}
+.form-recovery-verification--active {
+  display: block;
+}
+.sms-code-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 0px;
+  gap: 0 5px;
+}
+
+.sms-code {
+  width: 45px;
+  height: 60px;
+  border: 1px solid $color-blue;
+  border-radius: 5%;
+  text-align: center;
+  font-size: 24px;
+  padding: 0px !important;
+  margin-top: 0px !important;
+}
+
+.sms-code:focus {
+  outline: none;
+  border-color: $color-dark-blue;
+}
+
+.set-password {
+  max-width: 280px;
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+  &__form {
+    & label:nth-child(3) {
+      margin-top: 10px;
+    }
+  }
+  &__form {
+    margin-top: 15px;
+  }
+}
+.active {
+  display: block;
+}
+#autorization-back {
+  text-align: center;
+  margin: 10px auto 0;
+  width: 100%;
+  font-size: 14px;
+  background: none;
+  &:hover {
+    color: #00468e;
+  }
+}
+.change-block {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px 0px;
+}
+.form-autorization-footer__btn {
+  font-size: 14px;
+  line-height: 22px;
+  color: #212529;
+  background: none;
+  transition: all 0.5s ease;
+  &:hover {
+    transition: all 0.5s ease;
+    color: rgba(33, 37, 41, 0.5019607843);
+  }
+}

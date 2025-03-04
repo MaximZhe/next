@@ -1,0 +1,145 @@
+@import "../../config/variableAccount.scss";
+
+.content-section {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+}
+.user-bonuses {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  width: 100%;
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    text-align: left;
+    padding: 20px 15px;
+    background: $color-blue;
+  }
+  &__card-title {
+    font-size: $font-size-smile;
+    color: $color-white;
+    line-height: 22px;
+    font-weight: $font-weight600;
+  }
+  &__card-text {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: $color-white;
+    margin-top: 15px;
+  }
+  &__card-info {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  &__card-info-img {
+    max-width: 127px;
+    width: 100%;
+    min-height: 55px;
+  }
+  &__card-info-text {
+    font-size: $font-size-smile;
+    color: $color-white;
+    line-height: 22px;
+    font-weight: $font-weight400;
+  }
+  &__sale {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__sale-text {
+    font-size: $font-size-normal;
+    color: $color-dark;
+    line-height: 22px;
+    font-weight: $font-weight400;
+  }
+  &__sale-percent {
+    font-size: $font-size-normal;
+    color: $color-blue;
+    line-height: 22px;
+    font-weight: $font-weight600;
+  }
+}
+.user-bonuses-tickets {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 34px 34px 34px 34px 34px 34px 80px;
+  gap: 0 5px;
+  &__item {
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    background: #e0e1e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:last-child {
+      width: 80px;
+    }
+    &--active {
+      background-color: #09fa46;
+      background-image: url("../../icons/image/check-ticket.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    &--finaled {
+      background-image:none;
+      color: $color-white;
+    }
+    &--sale{
+      background-color: #09fa46;
+    }
+  }
+}
+.user-active-bonuses {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-size: $font-size-normal;
+    font-weight: $font-weight400;
+    color: $color-dark;
+    line-height: 22px;
+  }
+  &__btn {
+    max-width: 255px;
+    width: 100%;
+    margin-top: 30px;
+    border: 1px solid #00468e;
+    border-radius: 8px;
+    font-size: $font-size-normal;
+    color: $color-blue;
+    line-height: 22px;
+    font-weight: $font-weight500;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 740px) {
+  .content-section{
+    display:flex;
+    flex-direction: column;
+    gap:20px 0;
+  }
+}
+@media (max-width: 380px) {
+  .user-active-bonuses {
+    &__btn {
+      margin:30px auto 0 auto;
+    }
+  }
+}
+@media (max-width: 340px) {
+  .user-bonuses-tickets{
+    &__item--finaled{
+      max-width: 60px;
+    }
+  }
+}

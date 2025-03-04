@@ -1,0 +1,214 @@
+@import "../../config/variableAccount.scss";
+
+.dashboard {
+  &__sidebar {
+    width: 100%;
+  }
+
+  &__sidebar-header {
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+  }
+  &__sidebar-item {
+    &--active button {
+      background: #00468e26;
+      color: $color-blue;
+    }
+  }
+  &__sidebar-title {
+    font-size: $font-size-user;
+    color: $color-dark;
+    font-weight: $font-weight500;
+    line-height: 30px;
+  }
+  &__sidebar-subtitle {
+    font-size: $font-size-normal;
+    color: $color-blue;
+    font-weight: $font-weight400;
+    margin-top: 10px;
+  }
+  &__sidebar-body {
+    margin-top: 60px;
+  }
+  &__sidebar-link {
+    border-radius: 8px;
+    padding: 13px;
+    font-size: $font-size-normal;
+    line-height: 30px;
+    color: $color-dark;
+    font-weight: $font-weight400;
+    width: 100%;
+    text-align: left;
+    background: none;
+    &:hover {
+      color: $color-light-blue;
+    }
+  }
+  &__sidebar-btn {
+    color: red;
+    font-size: 14px;
+    background: none;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .dashboard {
+    &__sidebar-body {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid #2125291a;
+    }
+    &__sidebar-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .dashboard {
+    &__sidebar-body {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+    &__sidebar-list {
+      flex-wrap: nowrap;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0 10px 0;
+    }
+
+    &__sidebar-item {
+      flex: inherit;
+      text-align: center;
+      & > button {
+        padding: 20px 0px 0px 0px;
+        font-size: 11px;
+        line-height: 11px;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+    &__sidebar-item:nth-child(1) {
+      & > button {
+        position: relative;
+        background: none;
+        &::before {
+          content: " ";
+          background-image: url("../../icons/image/routes.svg"); 
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 24px; 
+          height: 24px; 
+          margin-bottom: 5px; 
+          position: absolute;
+          top: -3px;
+        }
+      }
+    }
+    &__sidebar-item:nth-child(2) {
+      & > button {
+        position: relative;
+        background: none;
+        &::before {
+          content: " "; 
+          background-image: url("../../icons/image/account.svg"); 
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 24px; 
+          height: 24px; 
+          margin-bottom: 5px;
+          position: absolute;
+          top: -7px;
+        }
+      }
+    }
+    // &__sidebar-item:nth-child(3) {
+    //   & > button {
+    //     position: relative;
+    //     background: none;
+    //     margin-top: 10px;
+    //     &::before {
+    //       content: " "; 
+    //       background-image: url(""); 
+    //       background-size: contain;
+    //       background-repeat: no-repeat;
+    //       width: 24px; 
+    //       height: 24px; 
+    //       margin-bottom: 5px; 
+    //       position: absolute;
+    //       top: -15px;
+    //     }
+    //   }
+    // }
+    &__sidebar-item:nth-child(3) {
+      & > button {
+        position: relative;
+        background: none;
+        &::before {
+          content: " "; 
+          background-image: url("../../icons/image/bonuses.svg"); 
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 24px; 
+          height: 24px; 
+          margin-bottom: 5px; 
+          position: absolute;
+          top: -7px;
+        }
+      }
+    }
+    // &__sidebar-item:nth-child(5) {
+    //   & > button {
+    //     position: relative;
+    //     background: none;
+    //     margin-top: 10px;
+    //     &::before {
+    //       content: " "; 
+    //       background-image: url(""); 
+    //       background-size: contain;
+    //       background-repeat: no-repeat;
+    //       width: 24px;
+    //       height: 24px; 
+    //       margin-bottom: 5px;
+    //       position: absolute;
+    //       top: -15px;
+    //     }
+    //   }
+    // }
+    &__sidebar-item:nth-child(4) {
+      & > button {
+        position: relative;
+        background: none;
+        margin-top: 10px;
+        &::before {
+          content: ""; 
+          background-image: url("../../icons/image/rules.svg"); 
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 24px; 
+          height: 24px;
+          margin-bottom: 5px; 
+          position: absolute;
+          top: -15px;
+        }
+      }
+    }
+    &__sidebar-link {
+      padding: 0;
+    }
+  }
+}

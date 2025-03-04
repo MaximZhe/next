@@ -1,0 +1,29 @@
+.slider-nav {
+    display: inline-flex;
+    &__btn {
+      border-radius: 50px;
+      background: #0243a6;
+      width: 32px;
+      height: 32px;
+      &:first-child {
+        transform: rotate(180deg);
+      }
+      & > svg {
+        fill: #FFFFFF;
+      }
+     &.disabled{
+      background:#ffffff;
+      & > svg{
+        fill:#0243a6;
+      }
+     }
+      &:last-child {
+        margin-left: 8px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .slider-nav{
+      display: none;
+    }
+  }

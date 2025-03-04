@@ -1,0 +1,303 @@
+.form-search {
+  display: flex;
+  grid-column-gap: 2px;
+  &__wrapper {
+    max-width: 271px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &:first-child > input {
+      border-radius: 6px 0px 0px 6px;
+    }
+    &:last-child {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 24px;
+      height: 56px;
+      margin-top: 20px;
+      max-width: 160px;
+    }
+    &:nth-child(2) > .form-search__container > input {
+      padding-left: 20px;
+      border-radius: 0px 0px 0px 0px!important;
+    }
+    &:nth-child(3) {
+      position: relative;
+    }
+  }
+  
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 8px;
+
+    & > input {
+      border-radius: 0px 6px 6px 0px;
+      position: relative;
+      margin-top: 0;
+    }
+    & > input[name="departure"] {
+      border-radius: 6px 0px 0px 6px;
+      position: relative;
+    }
+  }
+  &__image {
+    position: absolute;
+    right: -16px;
+    width: 33px;
+    height: 32px;
+    z-index: 10;
+    cursor: pointer;
+    transition: ease 1s all;
+    &.clicked > g > path:nth-child(2) {
+      transform: translateX(-3px);
+    }
+    &.clicked > g > path:nth-child(3) {
+      transform: translateX(-3px);
+    }
+    &.clicked > g > path:nth-child(4) {
+      transform: translateX(3px);
+    }
+    &.clicked > g > path:nth-child(5) {
+      transform: translateX(3px);
+    }
+
+  }
+  &__icon {
+    position: absolute;
+    cursor: pointer;
+    right: 8px;
+    transition: ease .5s;
+    &:hover{
+      & > path {
+        fill:#0243a6;
+      }
+    }
+  }
+  &__icon-wrapper {
+    position: absolute;
+    cursor: pointer;
+    right: 8px;
+    width: 34px;
+    height: 24px;
+  }
+  &__label {
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+  &__input {
+    background: #ffffff;
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding-left: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #445978;
+    &::placeholder {
+      color: #9fb1c9;
+    }
+  }
+&__select {
+  position: absolute;
+  top: 100%;
+  max-width: 271px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 0px 0px 6px 6px;
+  padding: 12px;
+  max-height: 130px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar-track {
+    background: transparent;        
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: blue;   
+    border-radius: 20px;       
+    border: 3px solid white;  
+  }
+  &::-webkit-scrollbar {
+    width: 12px;
+    height:10px;   
+  }
+  &{
+    scrollbar-width: thin;
+    scrollbar-color: blue white ;
+  }
+  z-index: 500;
+  box-shadow: 0px -1px 2px #000000;
+
+  & > button {
+    width:100%;
+    font-size: 14px;
+    line-height: 17px;
+    color: #445978;
+    background: none;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    & > span {
+      font-size:10px;
+      padding-top: 2px;
+      color: #0243a6;
+    }
+  }
+  &.active{
+    display: flex;
+  }
+}
+  &__sample {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &__btn {
+    font-size: 14px;
+    line-height: 18px;
+    background: none;
+    color: #ffffff;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      color: #000000;
+    }
+  }
+  &__calendar {
+    position: absolute;
+    top: 105px;
+    z-index: 15;
+    
+  }
+  &__btn-submit {
+    background-size: 300% 100%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    max-width: 160px;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition: all 1s ease-in-out;
+    &:hover {
+      background-position: 100% 0;
+      transition: all 1s ease-in-out; 
+    }
+    background-image: linear-gradient(to right, #e23f35, #b7170d, #e23f35, #b7170d);
+  }
+}
+.clicked > g > path.leftArrow {
+  transform: translateX(-3px);
+}
+.active {
+  & > path {
+    fill:#0243a6;
+  }
+}
+.react-calendar {
+  max-width: 271px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .form-search {
+    &__wrapper {
+      max-width: 100%;
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+    
+      &:nth-child(2) > .form-search__container > input {
+        padding-left: 12px;
+        
+      }
+      &:last-child {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 24px;
+        justify-content: center;
+      }
+    }
+    &__select{
+      max-width: 100%;
+    }
+    &__label {
+      position: absolute;
+      color: #9fb1c9;
+      right: 12px;
+      z-index: 10;
+      padding-top: 4px;
+    }
+    &__input {
+      margin-top: 2px;
+    }
+    &__container {
+      margin-top: 2px;
+      & input[name="departure"] {
+        border-radius: 6px 6px 0px 0px;
+      }
+      & > input {
+        margin-top: 0;
+        border-radius: 0px 0px 6px 6px;
+      }
+    }
+    &__image {
+      right: 12px;
+      bottom: -18px;
+      transform: rotate(90deg);
+      z-index: 5;
+    }
+    &__sample {
+      display: none;
+    }
+    &__btn-submit {
+      width: 100%;
+      max-width: 350px;
+    }
+    &__icon {
+      right: 47px;
+    }
+    &__calendar {
+      top: 60px;
+      right: 0;
+      left: 0;
+    }
+  }
+  .react-calendar {
+    max-width: 310px;
+    width: 100%;
+  }
+  
+}
+@media (max-width: 576px) {
+  .react-calendar {
+    max-width: 310px;
+    width: 100%;
+  }
+}

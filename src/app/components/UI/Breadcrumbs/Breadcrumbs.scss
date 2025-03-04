@@ -1,0 +1,18 @@
+.crumbs{
+    &__item{
+        font-size: 12px;
+        line-height: 16px;
+        color:#6A85AB
+    }
+    &__link{
+        font-size: 12px;
+        line-height: 16px;
+        color:#6A85AB
+    }
+    &__line{
+        display: inline-block;
+        font-size: 10px;
+        color:#6A85AB;
+        margin: 0 3px;
+    }
+}

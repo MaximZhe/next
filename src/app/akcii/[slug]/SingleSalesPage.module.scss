@@ -1,0 +1,203 @@
+.sales-single {
+  padding-top: 16px;
+  padding-bottom: 72px;
+  &__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 32px;
+  }
+  &__content {
+    max-width: 620px;
+    width: 100%;
+  }
+  &__item {
+    padding: 32px;
+    border-radius: 12px;
+    background: #ffffff;
+    margin-top: 32px;
+  }
+  &__subject {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+    color: #6a85ab;
+  }
+  &__text {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    & > span {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #005ee4;
+      padding: 0 5px;
+    }
+  }
+  &__value {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #005ee4;
+    padding: 0 5px;
+  }
+  &__title-list {
+    margin-top: 32px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  &__main-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    padding-top: 32px;
+  }
+  &__company {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+  }
+  &__promo {
+    max-width: 350px;
+    width: 100%;
+    padding-top: 15px;
+  }
+  &__img {
+    margin-top: 16px;
+    max-width: 554px;
+    width: 100%;
+    height: auto;
+  }
+  &__more {
+    color: #005ee4;
+    margin-top: 24px;
+    & > svg {
+      fill: #005ee4;
+    }
+  }
+  &__btn {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #005ee4;
+    font-size: 16px;
+    line-height: 20px;
+    transition: 0.3s ease-in-out;
+    max-width: 170px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #005ee4;
+    border-radius: 6px;
+    text-align: center;
+    &:hover {
+      color: #ffffff;
+      background: #005ee4;
+    }
+  }
+  &__icon {
+    position: relative;
+    fill: #005ee4;
+    transform: rotate(90deg);
+    top: 2px;
+    left: 4px;
+  }
+  &__info {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+  }
+}
+.sales-single-list {
+  margin-top: 16px;
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+.sales-single-promo {
+  margin-top: 32px;
+  border-radius: 12px;
+  background: #ebf3ff;
+  padding: 24px 10px;
+  text-align: center;
+  &__title {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #445978;
+  }
+  &__name {
+    text-transform: uppercase;
+    color: #005ee4;
+    padding-left: 5px;
+  }
+  &__list {
+    margin-top: 16px;
+  }
+  &__item {
+    font-size: 14px;
+    line-height: 18px;
+    color: #445978;
+    margin-top: 8px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+.sales-single-list-info {
+  margin-top: 16px;
+  &__item {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-top: 8px;
+    position: relative;
+    padding-left: 30px;
+    &:first-child {
+      margin-top: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: url("../../icons/image/Arrow-static-blue.svg") no-repeat;
+      left: 0;
+      background-position: center;
+    }
+  }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 860px) {
+}
+@media (max-width: 768px) {
+  .sales-single {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__content {
+      max-width: 100%;
+    }
+    &__promo {
+      padding-top: 0;
+      max-width: 100%;
+    }
+    &__img {
+      max-width: 100%;
+    }
+  }
+}
+

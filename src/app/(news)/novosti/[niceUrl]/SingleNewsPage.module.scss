@@ -1,0 +1,86 @@
+.news-single {
+  padding-top: 16px;
+  padding-bottom: 72px;
+  &__wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 32px;
+  }
+  &__content {
+    max-width: 620px;
+    width: 100%;
+  }
+  &__item {
+    padding: 32px;
+    border-radius: 12px;
+    background: #ffffff;
+    margin-top: 32px;
+  }
+  &__text {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+  &__main-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  &__title {
+    margin-top: 32px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &__img{
+    max-width: 300px;
+    height: auto;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  &__promo {
+    max-width: 350px;
+    width: 100%;
+    padding-top: 15px;
+  }
+  &__more {
+    color: #005ee4;
+    margin-top: 24px;
+    & > svg {
+      fill: #005ee4;
+    }
+  }
+}
+.news-single-actions {
+    min-height: 280px;
+  background: url("../../../icons/image/bg-action-card.png") no-repeat;
+  background-size: cover;
+  background-position-x: right;
+  background-position-y: top;
+}
+@media (max-width: 768px) {
+  .news-single {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__content {
+      max-width: 100%;
+    }
+    &__promo {
+      margin-top: 15px;
+      padding-top: 0;
+      max-width: 100%;
+    }
+  }
+}
+@media (max-width: 600px) {
+    .news-single-actions{
+        &__title{
+            font-size: 26px;
+            line-height: 32px;
+        }
+    }
+}

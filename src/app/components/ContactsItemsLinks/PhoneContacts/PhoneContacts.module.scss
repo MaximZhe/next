@@ -1,0 +1,8 @@
+.contacts-item-phone {
+    margin-top: 0;
+    padding-left: 30px;
+    position: relative;
+    & > a:hover {
+      color: #0243a6;
+    }
+  }
