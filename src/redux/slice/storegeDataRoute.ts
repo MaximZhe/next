@@ -5,7 +5,6 @@ interface DataRouteState {
     Routes: IItemRoutes[];
   }
 
-  
   const initialState: DataRouteState = {
     Routes:[
         {
